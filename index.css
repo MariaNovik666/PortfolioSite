@@ -1,0 +1,213 @@
+/*
+очистка внешних и внутренних отступов
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: Verdana, Arial, sans-serif;
+    color: black;
+}
+
+.header {
+    height: 88px;
+    background: black;
+}
+
+.header__container {
+    max-width: 1000px;
+    height: 88px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__logo {
+    color: white;
+    font-size: 36px;
+    margin-left: 26px;
+}
+
+.header__menu {
+    margin: 0 26px 0 auto;
+}
+
+.header__menu-mobile {
+    display: none;
+}
+
+.header__menu a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 3px 0;
+}
+
+.header__menu a:hover {
+    border-bottom: 2px white solid;
+}
+
+.header__menu a.selected {
+    border-bottom: 4px white solid;
+}
+
+.header__menu span {
+    padding: 0 10px;
+}
+
+.index {
+    padding: 0 26px;
+}
+
+.index .person {
+    padding: 100px 0;
+}
+
+.person {
+    text-align: center;
+}
+
+.person .round {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 150px;
+    margin: 0 auto;
+}
+
+.person h1 {
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.person h2 {
+    font-size: 18px;
+    font-weight: normal;
+    padding-top: 10px;
+}
+
+.person p {
+    font-size: 14px;
+    padding-top: 15px;
+    color: #5f5f5f;
+}
+
+.person p a {
+    text-decoration: none;
+    color: #D81919;
+}
+
+.person p a:hover {
+    text-decoration: underline;
+}
+
+.portfolio,
+.contacts {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: flex-start;
+    padding-bottom: 50px;
+}
+
+
+/* работаем над person внутри portfolio */
+
+.portfolio .person,
+.contacts .person {
+    width: 272px;
+    padding: 120px 0;
+}
+
+.portfolio .gallery {
+    width: calc(100% - 272px);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.gallery div {
+    flex-grow: 1;
+    flex-basis: 50%;
+    box-sizing: border-box;
+    padding: 18px;
+}
+
+.gallery span {
+    display: block;
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery span img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form {
+    padding: 90px 0;
+    width: calc(100% - 272px);
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.form input,
+.form textarea {
+    font-size: 14px;
+    font-family: Verdana, Arial, sans-serif;
+    color: black;
+}
+
+.form input[type="text"] {
+    display: block;
+    border: 1px black solid;
+    padding: 7px 14px;
+    margin-top: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form textarea {
+    display: block;
+    border: 1px black solid;
+    padding: 7px 14px;
+    height: 72px;
+    resize: none;
+    margin-top: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form input[type="submit"] {
+    display: block;
+    padding: 7px 24px;
+    margin: 30px 0 0 auto;
+    border: none;
+    background: black;
+    color: white;
+}
+
+.contacts .person {
+    text-align: left;
+}
+
+.contacts .person h1,
+.contacts .person p {
+    padding-left: 36px;
+}
